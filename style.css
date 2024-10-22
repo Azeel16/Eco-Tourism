@@ -1,0 +1,221 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header section */
+.header {
+    background: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.header .logo img {
+    height: 50px;
+    width: auto;
+}
+
+.header .navbar a {
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+
+.header .navbar a:hover,
+.header .navbar a.active {
+    background: #00a859;
+    border-radius: 4px;
+}
+
+/* Mobile menu button */
+#menu-btn {
+    display: none;
+}
+
+.heading {
+    text-align: center;
+    padding: 100px 0;
+    color: #fff;
+    font-size: 3rem;
+    background-size: cover;
+    background-position: center;
+}
+
+/* About section */
+.about {
+    display: flex;
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.about .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about .content {
+    margin-left: 30px;
+    max-width: 600px;
+}
+
+.about .content h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.about .content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #666;
+}
+
+.icons-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.icons i {
+    font-size: 2rem;
+    color: #00a859;
+    margin-right: 10px;
+}
+
+.icons span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Footer section */
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer .box {
+    margin-bottom: 20px;
+}
+
+.footer .box h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer .box a {
+    display: block;
+    color: #ddd;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer .box a:hover {
+    color: #00a859;
+}
+
+.footer .credit {
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.footer .credit span {
+    color: #00a859;
+}
+
+/* Scroll-to-top button */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #00a859;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    display: none;
+    z-index: 1000;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.scroll-top:hover {
+    background: #009148;
+}
+
+.scroll-top i {
+    font-size: 1.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+    }
+
+    .about .content {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    #menu-btn {
+        display: block;
+        color: #fff;
+        font-size: 24px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .header .navbar.active {
+        display: block;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #333;
+        width: 200px;
+        flex-direction: column;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 10px;
+        width: 100%;
+    }
+}
